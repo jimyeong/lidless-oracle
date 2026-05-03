@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "531569239257",
+    "project_id": "lidless-oracle-android",
+    "storage_bucket": "lidless-oracle-android.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531569239257:android:b1bbe593a29894bb4b0ac8",
+        "android_client_info": {
+          "package_name": "com.lidlessoracle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531569239257-3qu3bk7o7jfsje7g90bt76nkhgluh4cg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lidlessoracle",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "531569239257-gdoe6mdvaotofn6alum65350ilm1mcca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWFYOKKZ-CJPyHRm_T7M_6P9P1C2JS1G8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531569239257-gdoe6mdvaotofn6alum65350ilm1mcca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

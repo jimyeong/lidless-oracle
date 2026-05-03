@@ -1,3 +1,5 @@
+## `use_modular_headers!` start from cd ios && pod install 
+
 # Resolve react_native_pods.rb with node to allow for hoisting
 require Pod::Executable.execute_command('node', ['-p',
   'require.resolve(
@@ -8,14 +10,13 @@ require Pod::Executable.execute_command('node', ['-p',
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
-linkage = ENV['USE_FRAMEWORKS']
-if linkage != nil
-  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
-  use_frameworks! :linkage => linkage.to_sym
-end
-
 target 'lidlessOracle' do
   config = use_native_modules!
+
+  # firebase-ios-sdk (via @react-native-firebase) requires static frameworks; avoids
+  # "does not define modules" errors for GoogleUtilities and other transitive pods.
+  use_frameworks! :linkage => :static
+  $RNFirebaseAsStaticFramework = true
 
   use_react_native!(
     :path => config[:reactNativePath],
