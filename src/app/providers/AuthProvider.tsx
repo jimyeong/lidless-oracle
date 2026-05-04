@@ -50,6 +50,7 @@ export function AuthProvider({children}: {children: React.ReactNode}){
 
     useEffect(() => {
         const unsubscribe = auth().onAuthStateChanged( async (fbUser) => {
+            setInitialising(true);
             setFirebaseUser(fbUser);
             if(!fbUser){
                 setUser(null);
