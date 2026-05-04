@@ -5,6 +5,7 @@ import SplashScreen, {
   SPLASH_MIN_VISIBLE_MS,
 } from '../screens/Splash/SplashScreen';
 import HomeScreen from '../screens/Home/HomeScreen';
+import LoadingIndicator from '../shared/indicators/LoadingIndicator';
 
 export default function RootNavigator() {
   const { user, initialising } = useAuth();
@@ -16,7 +17,8 @@ export default function RootNavigator() {
   }, []);
 
   const showSplash = initialising || !minSplashElapsed;
-
+  // console.log("initialising", initialising);
+  
   if (showSplash) return <SplashScreen />;
   if (!user) return <LoginScreen />;
   
